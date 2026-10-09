@@ -1,0 +1,1 @@
+FACT-1.0 project website. Open index.html or run python3 -m http.server 8000. Includes 9 robot task videos and 5 dataset videos extracted from the supplied FACT-1.0 PowerPoint. Autoplay is muted to comply with browser policy. Figures are converted from the original paper PDFs.
