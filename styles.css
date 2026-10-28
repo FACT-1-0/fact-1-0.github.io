@@ -11,3 +11,59 @@
 
 @media(max-width:800px){.results-table thead th:first-child,.results-table tbody tr:not(.group-row)>th{position:sticky;left:0;z-index:2;background:#101a22;box-shadow:4px 0 8px #0002}.results-table thead th:first-child{background:#131e27}.results-table .mean-row th:first-child{background:#142029}}
 @media(max-width:540px){.results-table .task-col{width:190px}}
+
+/* Method explorer: animated overview + clickable brain / cerebellum detail views */
+.method-explorer{border:1px solid var(--line);border-radius:16px;background:var(--panel);padding:14px 14px 10px;margin-top:8px}
+.method-tabs{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 12px}
+.method-tabs button{display:inline-flex;align-items:center;gap:8px;border:1px solid #35414b;background:#0a1218;color:#c5ced6;border-radius:999px;padding:7px 14px;font:inherit;font-size:12px;cursor:pointer}
+.method-tabs button img{height:18px;width:auto;border-radius:4px}
+.method-tabs button[aria-selected="true"]{background:#182028;color:var(--ink);border-color:#5c6b78}
+.method-tabs button:hover{border-color:#7b8a98}
+.method-view[hidden]{display:none}
+.method-svg{display:block;width:100%;height:auto;background:#060c10;border-radius:12px;font-family:inherit}
+.method-svg .card{fill:#07111a;stroke:#2d3b46;stroke-width:1.5}
+.method-svg .card-brain{stroke:#5a4a66}.method-svg .card-cb{stroke:#3d5d57}
+.method-svg .idx{fill:#8e9ca8;font-size:14px}
+.method-svg .ttl{fill:#f4f4f6;font-size:21px;font-weight:500}
+.method-svg .clk{font-size:9.5px;letter-spacing:.14em}
+.method-svg .clk-pink{fill:var(--pink)}.method-svg .clk-mint{fill:var(--mint)}
+.method-svg .lbl text{fill:#c9d2d9;font-size:15px}
+.method-svg .out{fill:#c9d2d9;font-size:14px}
+.method-svg .wire{fill:none;stroke-width:1.6;opacity:.9}
+.method-svg .w-pink{stroke:#b48ac8}.method-svg .w-blue{stroke:#6fa6d6}.method-svg .w-mint{stroke:#7fc9b4}
+.method-svg .arrow-blue{marker-end:url(#m-blue)}.method-svg .arrow-mint{marker-end:url(#m-mint)}
+.method-svg .flow{stroke-dasharray:7 7;animation:method-dash 1.4s linear infinite}
+@keyframes method-dash{to{stroke-dashoffset:-28}}
+.method-svg .dit{fill:#2a1d33;stroke:#9b7bb0;stroke-width:1.5}
+.method-svg .head{fill:#0f1c27;stroke:#6fa6d6;stroke-width:1.3}
+.method-svg .head-t{fill:#e8eef3;font-size:10.5px;text-anchor:middle}
+.method-svg .box-t{fill:#f4f4f6;font-size:16px;text-anchor:middle}
+.method-svg .jt{fill:#0a1a1c;stroke:#7fc9b4;stroke-width:1.5}
+.method-svg .corefine{fill:none;stroke:#a2e6d0;stroke-width:1.3}
+.method-svg .tiny{fill:#c9d2d9;font-size:11px;text-anchor:middle}
+.method-svg .cache{fill:#0b1a22;stroke:#4b6a80;stroke-width:1.3}
+.method-svg .cache-t{fill:#dfe7ee;font-size:14px;text-anchor:middle}
+.method-svg .exec{fill:#0d1d1a;stroke:#a2e6d0;stroke-width:1.4}
+.method-svg .exec-t{fill:#eafff7;font-size:14px;text-anchor:middle}
+.method-svg .dot-blue{fill:#bfe0ff}.method-svg .dot-mint{fill:#d2fff0}
+.method-svg .foot{fill:#8e9ca8;font-size:12px;text-anchor:middle}
+.method-svg .icon-btn{cursor:pointer}
+.method-svg .icon-btn rect{fill:#0a1218;stroke:#3a4855;stroke-width:1.2;transition:stroke .2s}
+.method-svg .icon-btn:hover rect,.method-svg .icon-btn:focus rect{stroke:#aab8c6}
+.method-svg .icon-btn image{transform-box:fill-box;transform-origin:center}
+.method-svg .icon-brain image{animation:brain-pulse 2.4s ease-in-out infinite}
+.method-svg .icon-cb image{animation:cb-pulse .45s ease-in-out infinite}
+@keyframes brain-pulse{0%,100%{transform:scale(1);opacity:.85}50%{transform:scale(1.08);opacity:1}}
+@keyframes cb-pulse{0%,100%{transform:scale(1);opacity:.85}50%{transform:scale(1.1);opacity:1}}
+@media(prefers-reduced-motion:reduce){.method-svg .flow,.method-svg .icon-btn image{animation:none}}
+.method-detail{margin:0}
+.method-detail img{display:block;width:100%;height:auto;border-radius:12px;background:#060c10}
+.method-detail figcaption{display:flex;justify-content:space-between;gap:16px;padding:12px 2px 4px;color:#8d9ca8;font-size:11px}
+.method-detail figcaption span:first-child{color:#d5cad8}
+.method-film{margin:0 0 20px}
+/* Results: histograms from the film replace the tables */
+.result-chart{margin:26px 0 0}
+.result-chart img{display:block;width:100%;height:auto;border-radius:14px;border:1px solid #1f2b34;background:#060c10}
+.result-chart figcaption{display:flex;justify-content:space-between;gap:16px;padding:12px 2px 0;color:#8d9ca8;font-size:11px}
+.result-chart figcaption span:first-child{color:#d5cad8}
+@media(max-width:700px){.method-svg .ttl{font-size:24px}.method-tabs button{font-size:11px;padding:6px 11px}}
