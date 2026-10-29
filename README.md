@@ -10,7 +10,8 @@ Updated on 2026-10-29:
 - Method: animated brain/cerebellum overview with clickable planner / refiner diagrams only. The stage panels, narrated animation, static teaser figure and paper architecture image were removed.
 - Results: two looping, muted animations cut from the FACT film (`videos/results_main.mp4` 3:59–4:12, `videos/results_pretraining.mp4` 4:13–4:23), no captions.
 - Section headings share one white style, clamp(36px, 4.6vw, 52px). Task Demonstrations is centred with its arrows below the title.
-- Hero: affiliation logos (University of Michigan, Stanford, Microsoft) on a light card under the author line, cut from the film title card; Paper / Code / Data buttons at 16 px.
+- Hero: affiliation logos (University of Michigan, Stanford, Microsoft) directly on the dark background under the author line, cut from the film title card with wordmarks recoloured white; Paper / Code / Data buttons at 16 px. Main video capped at 1000 px wide.
+- Task Demonstrations and Results each carry a one-line 13 px subline.
 
 No build step or external font service is needed. Keep `assets/`, `videos/`, `styles.css`, `results.js`, and `FACT.pdf` beside `index.html` when uploading to GitHub Pages.
 
